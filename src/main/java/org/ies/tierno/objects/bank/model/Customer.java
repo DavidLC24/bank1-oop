@@ -1,18 +1,16 @@
-package org.example.airline.model;
+package org.ies.tierno.objects.bank.model;
 
 import java.util.Objects;
 
-public class Passenger {
+public class Customer {
     private String nif;
     private String name;
     private String surname;
-    private int seat;
 
-    public Passenger(String nif, String name, String surname, int seat) {
+    public Customer(String nif, String name, String surname) {
         this.nif = nif;
         this.name = name;
         this.surname = surname;
-        this.seat = seat;
     }
 
     public String getNif() {
@@ -39,33 +37,24 @@ public class Passenger {
         this.surname = surname;
     }
 
-    public int getSeat() {
-        return seat;
-    }
-
-    public void setSeat(int seat) {
-        this.seat = seat;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Passenger passenger = (Passenger) o;
-        return seat == passenger.seat && Objects.equals(nif, passenger.nif) && Objects.equals(name, passenger.name) && Objects.equals(surname, passenger.surname);
+        Customer customer = (Customer) o;
+        return Objects.equals(nif, customer.nif) && Objects.equals(name, customer.name) && Objects.equals(surname, customer.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nif, name, surname, seat);
+        return Objects.hash(nif, name, surname);
     }
 
     @Override
     public String toString() {
-        return "Passenger{" +
+        return "Customer{" +
                 "nif='" + nif + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", seat=" + seat +
                 '}';
     }
 }

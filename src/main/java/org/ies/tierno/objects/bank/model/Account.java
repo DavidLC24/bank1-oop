@@ -1,4 +1,4 @@
-package org.example.bank.model;
+package org.ies.tierno.objects.bank.model;
 
 import java.util.Objects;
 

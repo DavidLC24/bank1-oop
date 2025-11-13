@@ -1,4 +1,4 @@
-package org.example.bank;
+package org.ies.tierno.objects.bank;
 
 import org.ies.tierno.objects.bank.model.Bank;
 import org.ies.tierno.objects.bank.readers.AccountReader;
