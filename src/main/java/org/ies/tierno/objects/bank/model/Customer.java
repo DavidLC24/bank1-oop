@@ -16,6 +16,9 @@ public class Customer {
     public void showInfo(){
         System.out.println(surname+", "+name+", "+" ("+nif+")");
     }
+    public void ejemP(){
+
+    }
 
     public String getNif() {
         return nif;
